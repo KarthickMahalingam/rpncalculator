@@ -1,6 +1,6 @@
 require 'pry'
-require './validate_expression'
-require './stack'
+require './bin/validate_expression'
+require './bin/stack'
 # main script that performs RPM calculation
 class Calculator
   def initialize

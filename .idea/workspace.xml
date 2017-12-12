@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dadfb0d3-f343-475b-8583-8a5e51eb71e0" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/rspec/calculator_rspec.rb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/calculator.rb" afterPath="$PROJECT_DIR$/calculator.rb" />
-      <change beforePath="$PROJECT_DIR$/stack.rb" afterPath="$PROJECT_DIR$/stack.rb" />
-      <change beforePath="$PROJECT_DIR$/validate_expression.rb" afterPath="$PROJECT_DIR$/validate_expression.rb" />
+      <change beforePath="$PROJECT_DIR$/calculator.rb" afterPath="$PROJECT_DIR$/bin/calculator.rb" />
+      <change beforePath="$PROJECT_DIR$/stack.rb" afterPath="$PROJECT_DIR$/bin/stack.rb" />
+      <change beforePath="$PROJECT_DIR$/validate_expression.rb" afterPath="$PROJECT_DIR$/bin/validate_expression.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,32 +16,42 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/calculator@Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1513066265734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" MODULE_NAME="calculator" />
+    <SUITE FILE_PATH="coverage/calculator@Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1513067744453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="calculator" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="calculator.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/calculator.rb">
+      <file leaf-file-name="calculator_rspec.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rspec/calculator_rspec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calculator.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/calculator.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="validate_expression.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validate_expression.rb">
+        <entry file="file://$PROJECT_DIR$/bin/validate_expression.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="stack.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stack.rb">
+        <entry file="file://$PROJECT_DIR$/bin/stack.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -67,6 +78,8 @@
         <option value="$PROJECT_DIR$/validate_expression.rb" />
         <option value="$PROJECT_DIR$/stack.rb" />
         <option value="$PROJECT_DIR$/calculator.rb" />
+        <option value="$PROJECT_DIR$/rspec/calculator_rspec.rb" />
+        <option value="$PROJECT_DIR$/bin/calculator.rb" />
       </list>
     </option>
   </component>
@@ -105,6 +118,11 @@
               <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
               <item name="calculator" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="calculator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -116,7 +134,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/bin/node" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Less" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/calculator.rb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -134,7 +157,7 @@
     <configuration name="Unnamed" type="RubyRunConfigurationType" factoryName="Ruby">
       <module name="calculator" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
       <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
       <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
@@ -146,7 +169,7 @@
           <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
         </COVERAGE_PATTERN>
       </EXTENSION>
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/calculator.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/calculator.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
     </configuration>
   </component>
@@ -164,12 +187,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513014270071</updated>
-      <workItem from="1513014271853" duration="29726000" />
+      <workItem from="1513014271853" duration="30289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29726000" />
+    <option name="totallyTimeSpent" value="30289000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -215,7 +238,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stack.rb">
+    <entry file="file://$PROJECT_DIR$/bin/stack.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -223,18 +246,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validate_expression.rb">
+    <entry file="file://$PROJECT_DIR$/bin/validate_expression.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/calculator.rb">
+    <entry file="file://$PROJECT_DIR$/bin/calculator.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="42" column="23" lean-forward="true" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+        <state relative-caret-position="36">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rspec/calculator_rspec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
           <folding />
         </state>
       </provider>
