@@ -7,14 +7,14 @@ class Calculator
 
   def self.get_token
     loop do
-      print ">"
+      print '>'
       token = gets.chomp
       return if token == 'q'
       process_token(token)
     end
   end
   def self.is_operator?(token)
-    operator = ['+', '-', '*', '/']
+    operator = %w(+ - * /)
     operator.include?(token)
   end
 
@@ -30,14 +30,17 @@ class Calculator
     end
   end
 
+  def self.stack_pop
+    @stack.pop
+  end
+
   def self.evaluate(token)
-    operand2 = @stack.pop()
-    operand1 = @stack.pop()
+    operand2 = stack_pop
+    operand1 = stack_pop
     operator = token.to_sym
     result = operand1.send(operator, operand2)
     @stack.push(result)
     puts(result)
   end
-
   calc = Calculator.get_token
 end
