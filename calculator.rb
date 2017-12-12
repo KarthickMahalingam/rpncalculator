@@ -1,11 +1,14 @@
 require 'pry'
+require './validate_expression'
+require './stack'
+# main script that performs RPM calculation
 class Calculator
-  @stack = []
-  def self.is_numeric?(token)
-    token.to_i.to_s == token.to_s
+  def initialize
+    @stack = Stack.new
+    @validate_expression = ValidateExpression.new
   end
 
-  def self.get_token
+  def input_token
     loop do
       print '>'
       token = gets.chomp
@@ -13,34 +16,30 @@ class Calculator
       process_token(token)
     end
   end
-  def self.is_operator?(token)
-    operator = %w(+ - * /)
-    operator.include?(token)
-  end
 
-  def self.push_stack(token)
-    @stack.push(token.to_i)
-  end
-
-  def self.process_token(token)
-    if is_numeric?(token)
-      push_stack(token)
-    elsif is_operator?(token)
+  def process_token(token)
+    if @validate_expression.is_numeric?(token)
+      @stack.push_stack(token)
+    elsif @validate_expression.is_operand?(token)
+      parse_operand
       evaluate(token)
     end
   end
 
-  def self.stack_pop
-    @stack.pop
+  def parse_operand
+    @operand2 = @stack.pop_stack
+    @operand1 = @stack.pop_stack
   end
 
-  def self.evaluate(token)
-    operand2 = stack_pop
-    operand1 = stack_pop
-    operator = token.to_sym
-    result = operand1.send(operator, operand2)
-    @stack.push(result)
+  def evaluate(token)
+    operator = @validate_expression.to_operand(token)
+    result = @operand1.send(operator, @operand2)
+    @stack.push_stack(result)
     puts(result)
+  rescue ZeroDivisionError
+      puts 'Cannot divide by zero'
   end
-  calc = Calculator.get_token
+
+  calc = Calculator.new
+  calc.input_token
 end

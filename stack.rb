@@ -1,18 +1,22 @@
 class Stack
-  def initialize
-    calc_stack
+  class StackUnderFlowError < StandardError;
   end
 
-  def self.calc_stack
+  def initialize
     @stack = []
+    @validate_expression = ValidateExpression.new
   end
 
   def push_stack(token)
-    calc_stack.push(token)
+    @stack.push(token.to_i)
   end
 
   def pop_stack
-    calc_stack.pop
+    raise StackUnderFlowError, 'Stack is empty' if is_empty?
+    @stack.pop
   end
 
+  def is_empty?
+    @stack.empty?
+  end
 end
