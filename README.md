@@ -14,8 +14,14 @@ Ruby script implementing RPN calculator
 13
 ```
  
+#### DataStructures  used: Stack
+ As we are working from right to left, we need the most recent operand to compute first. So I used stack to implement
+ 
  #### What I'll do if I have additional time to work?
   I'll add advanced features like accepting various input formats and extend arithematic operations. Then make it work with TCP.
+  
+### Trade-off's:
+  This project doesn't support operator precedence. This can be fixed by get complete input operations and all the operators at the end, so that operator precedence can be maintained.
   
 #### How to run the code:
   Download the code to local. rpn.rb is the driver script that makes the other calls
