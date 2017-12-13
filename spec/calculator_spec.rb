@@ -22,8 +22,16 @@ RSpec.describe 'Calculator: ' do
       expect(calculator.process_token('_')).to eq(nil)
     end
 
-    it 'should raise Stack UnderflowError' do
-      expect {calculator.process_token('+')}.to raise_error(error_message = 'Stack is empty')
+    it 'should exit upon InsufficientOperandError' do
+     expect{calculator.process_token('+')}.to raise_exception(SystemExit)
+    end
+
+    it 'should check the exit value' do
+      begin
+        calculator.process_token('+')
+      rescue SystemExit=>e
+        expect(e.status).to eq(0)
+      end
     end
 
     it 'should throw message for when divided by zero' do

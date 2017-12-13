@@ -54,8 +54,8 @@ class Calculator
     @operand2 = stack.pop_stack
     @operand1 = stack.pop_stack
   rescue InSufficientOperandError => error
-    puts 'Insufficient operand to process..Exiting..'
-    exit
+   puts 'Insufficient operand to process..Exiting..'
+    exit 0
   end
 
   def evaluate(token)
