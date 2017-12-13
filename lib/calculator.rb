@@ -1,7 +1,7 @@
 require './lib/validate_expression'
 require './lib/stack'
 require 'pry'
-# main script that performs RPM calculation
+# all the calculation and I/O's are handled here
 class Calculator
   class InSufficientOperandError < StandardError;
   end
@@ -50,7 +50,7 @@ class Calculator
   end
 
   def parse_operand
-    raise InSufficientOperandError unless stack.stack_size > 2
+    raise InSufficientOperandError unless stack.stack_size >= 2
     @operand2 = stack.pop_stack
     @operand1 = stack.pop_stack
   rescue InSufficientOperandError => error
