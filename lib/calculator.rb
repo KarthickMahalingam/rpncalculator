@@ -1,7 +1,11 @@
 require './lib/validate_expression'
 require './lib/stack'
+require 'pry'
 # main script that performs RPM calculation
 class Calculator
+  class InSufficientOperandError < StandardError;
+  end
+
   def initialize
     @stack = Stack.new
     @validate_expression = ValidateExpression.new
@@ -15,12 +19,24 @@ class Calculator
     @validate_expression
   end
 
+  def quit_on_int
+    puts "U sure killed me guud!"
+    exit
+  end
+
+  trap "SIGINT" do
+    puts "Exiting"
+    exit 130
+  end
+
   def input_token
     loop do
+    begin
       print '>'
       token = STDIN.gets.chomp
       return if token == 'q'
       process_token(token)
+    end
     end
   end
 
@@ -34,8 +50,12 @@ class Calculator
   end
 
   def parse_operand
+    raise InSufficientOperandError unless stack.stack_size > 2
     @operand2 = stack.pop_stack
     @operand1 = stack.pop_stack
+  rescue InSufficientOperandError => error
+    puts 'Insufficient operand to process..Exiting..'
+    exit
   end
 
   def evaluate(token)

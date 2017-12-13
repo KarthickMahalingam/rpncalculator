@@ -11,6 +11,10 @@ class Stack
     @stack.push(token.to_i)
   end
 
+  def stack_size
+    @stack.size
+  end
+
   def pop_stack
     raise StackUnderFlowError, 'Stack is empty' if is_empty?
     @stack.pop
