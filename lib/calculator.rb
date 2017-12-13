@@ -1,4 +1,3 @@
-require 'pry'
 require './lib/validate_expression'
 require './lib/stack'
 # main script that performs RPM calculation
@@ -19,8 +18,7 @@ class Calculator
   def input_token
     loop do
       print '>'
-      token = STDIN.gets
-      token.chomp
+      token = STDIN.gets.chomp
       return if token == 'q'
       process_token(token)
     end
